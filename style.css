@@ -1,0 +1,14 @@
+#colors {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    gap: 5px;
+}
+
+.color {
+    height: 50px;
+}
+
+.chosenColor {
+    width: 100px;
+    height: 100px;
+}
