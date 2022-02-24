@@ -1,3 +1,11 @@
+#mainWindow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    width: auto;
+    gap: 30px;
+}
+
 #colors {
     display: grid;
     grid-template-columns: repeat(4, 50px);
@@ -11,4 +19,17 @@
 .chosenColor {
     width: 100px;
     height: 100px;
+}
+
+#svgImage {
+    justify-self: right;
+}
+
+#svgImage svg {
+    height: 85vh;
+    border: 1px solid #000;
+}
+
+.buttons {
+    margin-top: 20px;
 }
