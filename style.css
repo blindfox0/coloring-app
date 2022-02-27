@@ -23,11 +23,13 @@
 
 #svgImage {
     justify-self: right;
+    height: 85vh;
+    overflow: auto;
+    border: 1px solid #000;
 }
 
 #svgImage svg {
     height: 85vh;
-    border: 1px solid #000;
 }
 
 .buttons {

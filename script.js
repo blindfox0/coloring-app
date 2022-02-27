@@ -5,6 +5,10 @@ window.onload = function () {
     var chosenColor = document.getElementById("chosenColor");
     var clearColors = document.getElementById('clearColors');
     var resumeColors = document.getElementById('resumeColors');
+    var zoomIn = document.getElementById('zoomIn');
+    var zoomOut = document.getElementById('zoomOut');
+    var resetZoom = document.getElementById('resetZoom');
+    var a = 1; var b = 1;
     var colorToReplace;
     var colorTempArray = [];
     var colorBackup = [];
@@ -64,6 +68,34 @@ window.onload = function () {
         colorToReplace = clickedElement.target.style.backgroundColor;
         divChosenColor.style.backgroundColor = colorToReplace;
         console.log(colorToReplace);
+    }
+
+    /* funkcje przyciskow oddalajacych, przyblizajacych i resetujacych obraz */
+    zoomIn.onclick = function() {
+        console.log(a);
+        if (a < 1.8) {
+            console.log(a);
+            a = a + 0.2;
+            b = b + 0.2;
+            shapes.style.transform = `scale(${a}, ${b})`;
+            shapes.style.transition = "all 0.7s";
+        }
+    }
+
+    zoomOut.onclick = function() {
+        if (a > 1) {
+            a = a - 0.2;
+            b = b - 0.2;
+            shapes.style.transform = `scale(${a}, ${b})`;
+            shapes.style.transition = "all 0.7s";
+        }
+    }
+
+    resetZoom.onclick = function() {
+        a = 1;
+        b = 1;
+        shapes.style.transform = `scale(${a}, ${b})`;
+        shapes.style.transition = "all 0.7s";
     }
 
 }
