@@ -1,0 +1,9 @@
+#listOfImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+}
+
+.images {
+    width: 100%;
+}
+

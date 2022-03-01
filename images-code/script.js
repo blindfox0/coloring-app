@@ -10,6 +10,7 @@ window.onload = function () {
     var resetZoom = document.getElementById('resetZoom');
     var showImage = document.getElementById('showImage');
     var fullScreenImage = document.getElementById('fullScreenImage');
+    var closePreview = document.getElementById('closePreview');
     var a = 1; var b = 1;
     var colorToReplace;
     var colorTempArray = [];
@@ -72,7 +73,7 @@ window.onload = function () {
         console.log(colorToReplace);
     }
 
-    /* funkcje przyciskow oddalajacych, przyblizajacych i resetujacych obraz */
+    /* funkcje przyciskow oddalajacych, przyblizajacych i resetujacych obraz oraz podgladu */
     zoomIn.onclick = function() {
         console.log(a);
         if (a < 1.8) {
@@ -102,6 +103,11 @@ window.onload = function () {
 
     showImage.onclick = function() {
         fullScreenImage.style.transform = "translateY(0)";
+        fullScreenImage.style.transition = "transform 0.7s";
+    }
+
+    closePreview.onclick = function() {
+        fullScreenImage.style.transform = "translateY(-100%)";
         fullScreenImage.style.transition = "transform 0.7s";
     }
 

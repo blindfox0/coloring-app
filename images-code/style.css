@@ -1,5 +1,5 @@
 body {
-    background: url(./assets/tlo.jpg);
+    background: url(../assets/tlo.jpg);
     background-size: cover;
     background-position: center center;
     padding: 0;
@@ -42,7 +42,7 @@ h2 {
 }
 
 #svgImage svg {
-    height: 85vh;
+    height: 84vh;
 }
 
 .buttons {
@@ -76,6 +76,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    z-index: 999;
 }
 
 #fullScreenImage svg {
