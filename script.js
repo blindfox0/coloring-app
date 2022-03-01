@@ -8,6 +8,8 @@ window.onload = function () {
     var zoomIn = document.getElementById('zoomIn');
     var zoomOut = document.getElementById('zoomOut');
     var resetZoom = document.getElementById('resetZoom');
+    var showImage = document.getElementById('showImage');
+    var fullScreenImage = document.getElementById('fullScreenImage');
     var a = 1; var b = 1;
     var colorToReplace;
     var colorTempArray = [];
@@ -96,6 +98,11 @@ window.onload = function () {
         b = 1;
         shapes.style.transform = `scale(${a}, ${b})`;
         shapes.style.transition = "all 0.7s";
+    }
+
+    showImage.onclick = function() {
+        fullScreenImage.style.transform = "translateY(0)";
+        fullScreenImage.style.transition = "transform 0.7s";
     }
 
 }

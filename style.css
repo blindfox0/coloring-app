@@ -1,31 +1,44 @@
+body {
+    background: url(./assets/tlo.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+}
+
 #mainWindow {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
     width: auto;
     gap: 30px;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
 }
 
 #colors {
     display: grid;
-    grid-template-columns: repeat(4, 50px);
+    grid-template-columns: repeat(auto-fit, 40px);
     gap: 5px;
 }
 
 .color {
-    height: 50px;
+    height: 40px;
 }
 
 .chosenColor {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 #svgImage {
     justify-self: right;
     height: 85vh;
     overflow: auto;
-    border: 1px solid #000;
+    box-shadow: 0 0 8px #888888;
 }
 
 #svgImage svg {
@@ -34,4 +47,37 @@
 
 .buttons {
     margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100px;
+}
+
+#colorsWindow {
+    width: 400px;
+    background-color: #ffecd1;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.firstH2 {
+    margin-top: 0;
+}
+
+#fullScreenImage {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translatey(-100%);
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+#fullScreenImage svg {
+    height: 90vh;
 }
